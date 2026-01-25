@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TopNav } from "@/components/TopNav";
+import { Footer } from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Menta Math — Mental Math Practice",
+    default: "Menta Math — Free Mental Math Practice & Arithmetic Trainer",
     template: "%s — Menta Math",
   },
   description:
-    "Free mental math practice for addition, subtraction, multiplication, and division. Timed drills and printable Math Minute PDFs.",
+    "Free online mental math practice for students and adults. Improve arithmetic skills with timed drills in addition, subtraction, multiplication, and division. Build speed and accuracy with instant feedback.",
 };
 
 export default function RootLayout({
@@ -37,6 +38,7 @@ export default function RootLayout({
         
         <TopNav />
         <main className="mx-auto max-w-6xl px-4">{children}</main>
+        <Footer />
       </body>
     </html>
   );
