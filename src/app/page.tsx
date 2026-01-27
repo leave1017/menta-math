@@ -134,7 +134,7 @@ export default function HomePage() {
           <div className="text-center mb-8 space-y-2">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Mental Math Practice – Free Timed Arithmetic Trainer
+                Mental Math Practice – Free Mental Arithmetic Trainer
               </span>
             </h1>
             <p className="text-base text-slate-600 max-w-2xl mx-auto">
@@ -168,6 +168,30 @@ export default function HomePage() {
               </svg>
               Print Worksheets
             </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Demo Video Section */}
+      <div className="mt-10 mb-8">
+        <div className="max-w-5xl mx-auto px-4">
+          <div className="text-center mb-4">
+            <p className="text-lg font-semibold text-slate-600 dark:text-slate-400">
+              Watch a 15-second demo
+            </p>
+          </div>
+          
+          <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 p-6 shadow-lg">
+            <video
+              controls
+              preload="none"
+              playsInline
+              className="w-full aspect-video rounded-lg bg-slate-100 dark:bg-slate-800"
+              poster="/demo/trainer-demo-poster.jpg"
+            >
+              <source src="/demo/trainer-demo.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>

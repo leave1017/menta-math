@@ -82,7 +82,7 @@
 ```jsx
 <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
   <span className="bg-gradient-to-r ...">
-    Mental Math Practice – Free Timed Arithmetic Trainer
+    Mental Math Practice – Free Mental Arithmetic Trainer
   </span>
 </h1>
 ```
