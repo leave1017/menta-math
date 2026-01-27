@@ -242,6 +242,7 @@ export function Trainer({ initialConfig, initialQuestions, showShare = false }: 
                   }}
                 >
                   <input
+                    id="trainer-answer"
                     ref={inputRef}
                     inputMode="numeric"
                     className="w-full rounded-2xl border-3 border-slate-300 bg-white px-6 py-5 text-3xl text-center font-bold focus:border-blue-500 focus:ring-4 focus:ring-blue-200 transition-all outline-none shadow-sm"

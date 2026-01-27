@@ -174,7 +174,7 @@ export default function HomePage() {
 
       {/* SEO Content Section Below Hero */}
       <div className="py-16">
-        <HomeContent />
+        <HomeContent defaultOp={initialConfig.op} defaultDigits={initialConfig.digits1} />
       </div>
     </>
   );

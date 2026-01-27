@@ -1,6 +1,14 @@
+"use client";
+
+import Link from "next/link";
 import { FAQAccordion } from "./FAQAccordion";
 
-export function HomeContent() {
+interface Props {
+  defaultOp?: string;
+  defaultDigits?: number;
+}
+
+export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: Props = {}) {
   const faqItems = [
     {
       question: "What is mental math practice?",
@@ -125,12 +133,12 @@ export function HomeContent() {
               <p><strong className="text-slate-900">Tip:</strong> repeat the same operation for one week</p>
             </div>
 
-            <a 
-              href="#trainer"
+            <Link 
+              href={`/p/${defaultOp}/${defaultDigits}/10`}
               className="block w-full py-3 text-center text-sm font-bold text-blue-600 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors"
             >
-              Try 10 Questions →
-            </a>
+              Start 10-question set →
+            </Link>
           </div>
 
           {/* Card 2: Speed 20 - Recommended */}
@@ -155,12 +163,12 @@ export function HomeContent() {
               <p><strong className="text-slate-900">Tip:</strong> track your time and try to beat it by a small margin</p>
             </div>
 
-            <a 
-              href="#trainer"
+            <Link 
+              href={`/p/${defaultOp}/${defaultDigits}/20`}
               className="block w-full py-3 text-center text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl hover:from-emerald-600 hover:to-green-600 transition-all shadow-md hover:shadow-lg"
             >
-              Try 20 Questions →
-            </a>
+              Start 20-question set →
+            </Link>
           </div>
 
           {/* Card 3: Fluency 50 */}
@@ -185,12 +193,12 @@ export function HomeContent() {
               <p><strong className="text-slate-900">Tip:</strong> if accuracy drops, step back to Speed 20 for a few days</p>
             </div>
 
-            <a 
-              href="#trainer"
+            <Link 
+              href={`/p/${defaultOp}/${defaultDigits}/50`}
               className="block w-full py-3 text-center text-sm font-bold text-purple-600 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors"
             >
-              Try 50 Questions →
-            </a>
+              Start 50-question set →
+            </Link>
           </div>
         </div>
       </section>
@@ -301,38 +309,30 @@ export function HomeContent() {
         </div>
       </section>
 
-      {/* Section 7: CTA */}
-      <section className="relative overflow-hidden rounded-3xl border-2 border-blue-200 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 p-12 text-center shadow-xl">
-        <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 blur-3xl opacity-20 w-64 h-64 bg-gradient-to-br from-blue-400 to-purple-400 rounded-full" />
-        <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 blur-3xl opacity-20 w-64 h-64 bg-gradient-to-br from-indigo-400 to-blue-400 rounded-full" />
-        
-        <div className="relative">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white text-2xl font-bold shadow-lg mb-6">
-            🚀
-          </div>
-          
-          <h2 className="mb-4 text-3xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Start Practicing Today
-            </span>
-          </h2>
-          
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-slate-700 leading-relaxed">
-            Pick one operation, start with a comfortable digit level, and practice for 5–10 minutes. Keep accuracy high, 
-            then let speed improve naturally. This style of <strong>mental math practice</strong> is simple, repeatable, 
-            and effective—perfect for home routines or classroom warm-ups.
-          </p>
-          
-          <a
-            href="#top"
-            className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 text-lg font-bold text-white shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-200"
-          >
-            Start Practicing Now
-            <svg className="w-5 h-5 group-hover:-translate-y-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-            </svg>
-          </a>
-        </div>
+      {/* Section 7: Back to Trainer (Lightweight) */}
+      <section className="text-center py-6">
+        <p className="text-slate-600 mb-4 text-sm">Ready to practice?</p>
+        <button
+          onClick={() => {
+            const trainer = document.getElementById("trainer");
+            if (trainer) {
+              trainer.scrollIntoView({ behavior: "smooth", block: "start" });
+              // Focus input after scroll completes
+              setTimeout(() => {
+                const input = document.getElementById("trainer-answer");
+                if (input) {
+                  (input as HTMLInputElement).focus();
+                }
+              }, 500);
+            }
+          }}
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-md hover:shadow-lg hover:scale-105 transition-all duration-200"
+        >
+          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+          </svg>
+          Back to trainer
+        </button>
       </section>
     </div>
   );
