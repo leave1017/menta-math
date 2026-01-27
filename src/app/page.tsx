@@ -8,7 +8,7 @@ export default function HomePage() {
     op: "mul" as const,
     digits1: 1,
     digits2: 1,
-    count: 10
+    count: 5
   };
   const initialQuestions = makeQuestions(initialConfig);
 
