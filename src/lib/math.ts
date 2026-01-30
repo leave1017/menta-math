@@ -14,7 +14,7 @@ export type Question = {
   id: string;
   op: Op;
   a: number;
-  b: nxumber;
+  b: number;
   text: string;
   answer: number;
 };

@@ -39,7 +39,7 @@ export default function PracticeDetailPage({ params }: Props) {
   const { op, digits, count } = parsed;
   const label = opLabel(op);
 
-  cconst initialConfig = { op, digits1: digits, digits2: digits, count };
+  const initialConfig = { op, digits1: digits, digits2: digits, count };
   const initialQuestions = makeQuestions(initialConfig);  
 
   // Generate sibling links (same op, different digits/count)
