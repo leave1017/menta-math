@@ -14,7 +14,7 @@ export type Question = {
   id: string;
   op: Op;
   a: number;
-  b: number;
+  b: nxumber;
   text: string;
   answer: number;
 };
@@ -22,6 +22,8 @@ export type Question = {
 export const OpSchema = z.enum(OPS);
 export const DigitsSchema = z.coerce.number().int().min(1).max(8);
 export const CountSchema = z.coerce.number().int().min(1).max(99);
+export type Count = z.infer<typeof CountSchema>;
+export type Digits = z.infer<typeof DigitsSchema>;
 
 export function opLabel(op: Op) {
   switch (op) {
