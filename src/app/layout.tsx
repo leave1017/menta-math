@@ -5,6 +5,7 @@ import "./globals.css";
 import { TopNav } from "@/components/TopNav";
 import { Footer } from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { CanonicalLink } from "@/components/CanonicalLink";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -66,6 +67,9 @@ export default function RootLayout({
           enableSystem={false}
           storageKey="menta-math-theme"
         >
+          {/* Canonical Link - Auto-generated for all pages */}
+          <CanonicalLink />
+          
           {/* Background decorative grid */}
           <div className="fixed inset-0 -z-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808020_1px,transparent_1px),linear-gradient(to_bottom,#80808020_1px,transparent_1px)] bg-[size:14px_24px]" />
           
