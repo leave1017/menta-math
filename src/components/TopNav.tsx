@@ -19,21 +19,16 @@ export function TopNav() {
     <header className="sticky top-0 z-50 border-b border-slate-200/50 bg-white/90 dark:bg-slate-900/90 dark:border-slate-700/50 backdrop-blur-lg shadow-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         {/* Logo */}
-  {/* Logo */}
-<Link href="/" className="flex items-center gap-3 group">
-  <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
-    <img
-      src="/icon.png"
-      alt="Menta Math Logo"
-      className="w-full h-full object-cover"
-    />
-  </div>
-  <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-    Menta Math
-  </span>
-</Link>
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
+            <img
+              src="/icon.png"
+              alt="Menta Math Logo"
+              className="w-full h-full object-cover"
+            />
+          </div>
           <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            Mental Math
+            Menta Math
           </span>
         </Link>
 

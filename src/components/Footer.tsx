@@ -28,8 +28,12 @@ export function Footer() {
           {/* Left Column: Logo & Description */}
           <div className="space-y-4">
             <Link href="/" className="inline-flex items-center gap-3 group">
-              <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-xl shadow-md">
-                M
+              <div className="w-10 h-10 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
+                <img
+                  src="/icon.png"
+                  alt="Menta Math Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-bold text-xl tracking-tight bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                 Menta Math
