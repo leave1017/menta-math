@@ -4,10 +4,12 @@ import Link from "next/link";
 import { FAQAccordion } from "./FAQAccordion";
 
 export interface HomeContentProps {
+  // Props kept for potential future use, currently unused
   defaultOp?: string;
   defaultDigits?: number;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeContentProps = {}) {
   const faqItems = [
     {
