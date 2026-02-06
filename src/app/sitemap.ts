@@ -39,6 +39,10 @@ const STATIC_ROUTES = [
   "/privacy",    // Privacy policy
   "/terms",      // Terms of service
   "/cookies",    // Cookie policy
+  "/practice-plans",        // Practice plans index
+  "/practice-plans/daily-10",   // Daily 10 plan
+  "/practice-plans/speed-20",   // Speed 20 plan
+  "/practice-plans/fluency-50", // Fluency 50 plan
 ];
 
 /**

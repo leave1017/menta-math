@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { FAQAccordion } from "./FAQAccordion";
 
-interface Props {
+export interface HomeContentProps {
   defaultOp?: string;
   defaultDigits?: number;
 }
 
-export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: Props = {}) {
+export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeContentProps = {}) {
   const faqItems = [
     {
       question: "What is mental math practice?",
@@ -112,6 +112,11 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: Props = {}
         <h2 className="mb-8 text-3xl font-bold tracking-tight text-center">
           Three Simple Practice Plans (Pick One and Repeat)
         </h2>
+        <p className="text-center text-slate-600 mb-8">
+          <Link href="/practice-plans/" className="text-blue-600 hover:text-blue-700 underline font-medium">
+            View all Practice Plans →
+          </Link>
+        </p>
         <div className="grid gap-8 md:grid-cols-3">
           {/* Card 1: Daily 10 */}
           <div className="group relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg hover:shadow-2xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300">
@@ -134,10 +139,10 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: Props = {}
             </div>
 
             <Link 
-              href={`/p/${defaultOp}/${defaultDigits}/10`}
+              href="/practice-plans/daily-10/"
               className="block w-full py-3 text-center text-sm font-bold text-blue-600 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors"
             >
-              Start 10-question set →
+              Learn more about Daily 10 →
             </Link>
           </div>
 
@@ -164,10 +169,10 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: Props = {}
             </div>
 
             <Link 
-              href={`/p/${defaultOp}/${defaultDigits}/20`}
+              href="/practice-plans/speed-20/"
               className="block w-full py-3 text-center text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-green-500 rounded-xl hover:from-emerald-600 hover:to-green-600 transition-all shadow-md hover:shadow-lg"
             >
-              Start 20-question set →
+              Learn more about Speed 20 →
             </Link>
           </div>
 
@@ -194,10 +199,10 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: Props = {}
             </div>
 
             <Link 
-              href={`/p/${defaultOp}/${defaultDigits}/50`}
+              href="/practice-plans/fluency-50/"
               className="block w-full py-3 text-center text-sm font-bold text-purple-600 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors"
             >
-              Start 50-question set →
+              Learn more about Fluency 50 →
             </Link>
           </div>
         </div>
