@@ -1,11 +1,21 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { OpSchema, opLabel } from "@/lib/math";
+import { OPS, OpSchema, opLabel } from "@/lib/math";
 
 type Props = {
   params: { op: string };
 };
+
+/**
+ * Generate static params for all operation types
+ * This tells Next.js to pre-build these pages at build time
+ */
+export async function generateStaticParams() {
+  return OPS.map((op) => ({
+    op: op,
+  }));
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const result = OpSchema.safeParse(params.op);

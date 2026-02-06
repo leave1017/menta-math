@@ -2,12 +2,36 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Trainer } from "@/components/Trainer";
-import { CountSchema, DigitsSchema, OpSchema, opLabel, makeQuestions } from "@/lib/math";
+import { OPS, CountSchema, DigitsSchema, OpSchema, opLabel, makeQuestions } from "@/lib/math";
 import type { Count, Digits } from "@/lib/math";
 
 type Props = {
   params: { op: string; digits: string; count: string };
 };
+
+/**
+ * Generate static params for all common practice combinations
+ * 4 operations × 3 digit levels × 3 question counts = 36 pages
+ */
+export async function generateStaticParams() {
+  const allDigits = [1, 2, 3] as const;
+  const allCounts = [10, 20, 50] as const;
+  const params = [];
+
+  for (const op of OPS) {
+    for (const digits of allDigits) {
+      for (const count of allCounts) {
+        params.push({
+          op: op,
+          digits: String(digits),
+          count: String(count),
+        });
+      }
+    }
+  }
+
+  return params;
+}
 
 function parseParams(params: Props["params"]) {
   const op = OpSchema.safeParse(params.op);
