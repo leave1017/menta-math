@@ -46,6 +46,15 @@ const STATIC_ROUTES = [
 ];
 
 /**
+ * Generate dynamic routes for grade pages
+ * Pattern: /grades/[grade]
+ * Grades 1-6 for elementary school
+ */
+function getGradeRoutes(): string[] {
+  return [1, 2, 3, 4, 5, 6].map((grade) => `/grades/${grade}`);
+}
+
+/**
  * Generate dynamic routes for practice pages
  * Pattern: /practice/[op]
  * Enumerate all operations: add, sub, mul, div
@@ -94,6 +103,7 @@ function getProblemSetRoutes(): string[] {
 function getAllRoutes(): string[] {
   return [
     ...STATIC_ROUTES,
+    ...getGradeRoutes(),
     ...getPracticeRoutes(),
     ...getProblemSetRoutes(),
   ];
