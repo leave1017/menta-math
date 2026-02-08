@@ -58,11 +58,12 @@ function randInt(min: number, max: number) {
 }
 
 export function rangeForDigits(digits: number) {
-  if (digits === 1) return { min: 0, max: 9 };
+  // 1位数从1开始，避免0+0=0, 0×0=0等无意义题目
+  if (digits === 1) return { min: 1, max: 9 };
   if (digits === 2) return { min: 10, max: 99 };
   if (digits === 3) return { min: 100, max: 999 };
   // 支持更多位数
-  const min = digits === 1 ? 0 : Math.pow(10, digits - 1);
+  const min = Math.pow(10, digits - 1);
   const max = Math.pow(10, digits) - 1;
   return { min, max };
 }
@@ -107,12 +108,21 @@ export function makeQuestion(
     return { id, op, a, b, answer: a * b, text: `${a} ${sym} ${b} = ${blank}` };
   }
 
-  // div: guarantee integer result by constructing dividend = divisor * quotient
-  const divisor = focus != null ? focus : randInt(Math.max(1, range2.min), range2.max);
-  const qMin = Math.ceil(range1.min / divisor);
-  const qMax = Math.floor(range1.max / divisor);
-  const qMinPos = Math.max(1, qMin);
-  const quotient = qMax >= qMinPos ? randInt(qMinPos, qMax) : 1;
+  // div: guarantee integer result by constructing dividend = divisor × quotient
+  // 修复：确保商有意义（不只是1），根据位数选择合适的商范围
+  
+  // 根据除数位数决定商的范围
+  // 1位数除数：商 2-9（产生如 56÷7=8 的题目）
+  // 2位数除数：商 2-9（产生如 240÷30=8 的题目）
+  // 3位数及以上：商 2-9
+  const quotientMin = 2;
+  const quotientMax = digits2 === 1 ? 9 : 9;
+  const quotient = randInt(quotientMin, quotientMax);
+  
+  // 生成除数
+  const divisor = focus != null ? focus : randInt(range2.min, range2.max);
+  
+  // 被除数 = 除数 × 商（被除数可能超出原始range1范围，这是可接受的）
   const dividend = divisor * quotient;
 
   return {

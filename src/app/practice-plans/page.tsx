@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { PlanCard, PLAN_CARDS_DATA } from "@/components/PlanCard";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 export const metadata: Metadata = {
   title: "Mental Math Practice Plans (Daily 10, Speed 20, Fluency 50)",
@@ -10,6 +11,14 @@ export const metadata: Metadata = {
 export default function PracticePlansPage() {
   return (
     <div className="max-w-6xl mx-auto space-y-12 py-12">
+      {/* Breadcrumb Navigation */}
+      <Breadcrumb 
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Practice Plans", href: "/practice-plans/" },
+        ]}
+      />
+
       {/* Header */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">
