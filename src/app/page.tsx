@@ -27,6 +27,30 @@ export default function HomePage() {
       },
       {
         "@type": "Question",
+        "name": "What is the best way to improve mental math for class 2?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Focusing on 2-digit addition and basic subtraction facts daily is key. Use our Daily 10 mode to build confidence with mental maths for class 2."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need mental math worksheets for practice?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "While worksheets are great for offline study, our online trainer provides instant feedback and timed pressure, which is more effective for building fluency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there specific mental math tricks for multiplication?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, strategies like doubling/halving and using friendly numbers (e.g., 10×n - n for 9×n) are essential mental math tricks to speed up calculations."
+        }
+      },
+      {
+        "@type": "Question",
         "name": "How long should mental arithmetic practice take each day?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -67,14 +91,6 @@ export default function HomePage() {
       },
       {
         "@type": "Question",
-        "name": "Do I need worksheets for mental arithmetic practice?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Worksheets can help, but a quick online trainer makes daily repetition easier. Many users combine both for variety."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "What if my accuracy drops when I go faster?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -95,14 +111,6 @@ export default function HomePage() {
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Record your time and accuracy. Improvement shows as fewer mistakes and steadier pacing during mental math practice."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is 1-digit practice still useful for older students?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Returning to fundamentals builds speed and confidence, especially when gaps exist."
         }
       },
       {
@@ -131,15 +139,35 @@ export default function HomePage() {
         
         <div className="relative mx-auto max-w-5xl">
           {/* Small Title Above Trainer (Fixed H1 with separator) */}
-          <div className="text-center mb-8 space-y-2">
+          <div className="text-center mb-8 space-y-3">
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight">
               <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                Mental Math Practice – Free Mental Arithmetic Trainer
+                Free Mental Math Practice Online: Daily Trainer for Class 1 to Class 5
               </span>
             </h1>
             <p className="text-base text-slate-600 max-w-2xl mx-auto">
-              Open, select your operation and difficulty, then start practicing. Timer starts automatically.
+              Build fluency with <strong>mental math practice</strong> designed for <strong>mental maths for class 1</strong> through class 5. Master <strong>2-digit addition</strong>, times tables, and <strong>mental arithmetic practice</strong> with instant feedback.
             </p>
+            
+            {/* Quick Jump Tags */}
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+              <span className="text-xs text-slate-500 font-medium">Quick jump:</span>
+              <Link href="/grades/1/" className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                Class 1
+              </Link>
+              <Link href="/grades/2/" className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                Class 2
+              </Link>
+              <Link href="/grades/3/" className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                Class 3
+              </Link>
+              <Link href="/grades/4/" className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                Class 4
+              </Link>
+              <Link href="/grades/5/" className="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-blue-100 text-blue-700 hover:bg-blue-200 transition-colors">
+                Class 5
+              </Link>
+            </div>
           </div>
 
           {/* Trainer as Primary Visual (Centered, Large) */}

@@ -19,11 +19,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Mental Math Practice | Free Mental Arithmetic Trainer",
-    template: "%s — Menta Math",
+    default: "Mental Math Practice & Tricks | Free Online Trainer for Kids",
+    template: "%s — Mental Math",
   },
   description:
-    "Free mental arithmetic trainer for mental math practice. Choose operation, digits & questions. Timed or countdown mode with instant feedback.",
+    "Master mental math practice with our free online trainer. Perfect for class 1-5 students to improve mental arithmetic, speed, and accuracy. Start your daily drill now!",
 };
 
 export default function RootLayout({

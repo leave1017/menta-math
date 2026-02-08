@@ -18,6 +18,21 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         "Mental math practice is solving math problems in your head without writing steps or using a calculator. It improves number sense, fluency, and confidence.",
     },
     {
+      question: "What is the best way to improve mental math for class 2?",
+      answer:
+        "Focusing on 2-digit addition and basic subtraction facts daily is key. Use our \"Daily 10\" mode to build confidence with mental maths for class 2.",
+    },
+    {
+      question: "Do I need mental math worksheets for practice?",
+      answer:
+        "While worksheets are great for offline study, our online trainer provides instant feedback and timed pressure, which is more effective for building fluency.",
+    },
+    {
+      question: "Are there specific mental math tricks for multiplication?",
+      answer:
+        "Yes, strategies like doubling/halving and using \"friendly numbers\" (e.g., 10×n - n for 9×n) are essential mental math tricks to speed up calculations.",
+    },
+    {
       question: "How long should mental arithmetic practice take each day?",
       answer:
         "Most learners improve with 5–10 minutes daily. Short, consistent mental math practice beats long sessions once in a while.",
@@ -43,11 +58,6 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         "Use small clusters (like 6s and 7s) and practice daily. Consistent mental math practice plus quick error review is the fastest path.",
     },
     {
-      question: "Do I need worksheets for mental arithmetic practice?",
-      answer:
-        "Worksheets can help, but a quick online trainer makes daily repetition easier. Many users combine both for variety.",
-    },
-    {
       question: "What if my accuracy drops when I go faster?",
       answer:
         "Slow down for a few sessions and rebuild accuracy. Then increase speed again. Better mental arithmetic practice always starts with correct answers.",
@@ -61,11 +71,6 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
       question: "How do I track progress?",
       answer:
         "Record your time and accuracy. Improvement shows as fewer mistakes and steadier pacing during mental math practice.",
-    },
-    {
-      question: "Is 1-digit practice still useful for older students?",
-      answer:
-        "Yes. Returning to fundamentals builds speed and confidence, especially when gaps exist.",
     },
     {
       question: "How often should I practice each week?",
@@ -83,12 +88,12 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         </h2>
         <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
           <p>
-            Mental math is a skill you build through small, consistent wins. This page is a simple, timed trainer designed 
-            for <strong>mental math practice</strong> at home or in the classroom. Choose addition, subtraction, multiplication, 
-            or division, pick the digit level, select how many questions you want, and begin. The timer starts automatically when 
-            you submit your first answer, so your <strong>mental arithmetic practice</strong> stays focused and measurable. 
-            If you want faster recall, better accuracy, and stronger number sense, daily <strong>mental math practice</strong> is 
-            one of the most efficient ways to get there.
+            <strong>Mental math practice</strong> is the foundation of mathematical fluency. Whether you&apos;re supporting <strong>mental maths for class 1</strong> beginners 
+            learning number bonds, or <strong>mental maths for class 2</strong> students mastering <strong>2-digit addition</strong>, this free online trainer provides structured, 
+            timed practice with instant feedback. As an educator-designed tool, we focus on building confidence through repetition and accuracy before speed. 
+            Choose your operation (addition, subtraction, multiplication, or division), select the appropriate digit level for your student&apos;s grade, 
+            and begin your <strong>mental arithmetic practice</strong> journey. The timer starts automatically when you submit your first answer, 
+            keeping practice focused and measurable—no paper, no calculator, just pure mental computation skills.
           </p>
         </div>
       </section>
@@ -124,6 +129,11 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
           <div className="group relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg hover:shadow-2xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-transparent rounded-tl-3xl" />
             
+            {/* Grade Label Badge */}
+            <div className="relative mb-3 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-green-100 to-emerald-100 px-3 py-1 text-xs font-bold text-green-700 shadow-sm border border-green-200">
+              Best for Class 1 & 2
+            </div>
+            
             <div className="relative mb-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-blue-100 to-blue-200 px-4 py-2 text-sm font-bold text-blue-700 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse" />
               Accuracy First
@@ -131,7 +141,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
             
             <h3 className="mb-3 text-2xl font-bold text-slate-900">Daily 10</h3>
             <p className="mb-6 text-slate-600 leading-relaxed">
-              A short set of 10 questions is perfect for building confidence. Use this for early learners or when introducing a new skill.
+              A short set of 10 questions is perfect for building confidence. Master <strong>mental math for class 1</strong> basics with this gentle introduction to timed practice.
             </p>
             
             <div className="space-y-3 text-sm text-slate-700 mb-6">
@@ -152,6 +162,11 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
           <div className="group relative rounded-3xl border-2 border-emerald-300 bg-gradient-to-br from-white to-emerald-50 p-8 shadow-xl hover:shadow-2xl hover:border-emerald-400 hover:-translate-y-2 transition-all duration-300 ring-2 ring-emerald-200">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-emerald-500/10 to-transparent rounded-tl-3xl" />
             
+            {/* Grade Label Badge */}
+            <div className="relative mb-3 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-green-100 to-emerald-100 px-3 py-1 text-xs font-bold text-green-700 shadow-sm border border-green-200">
+              Ideal for Class 3 & 4
+            </div>
+            
             <div className="relative mb-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-emerald-500 to-green-500 px-4 py-2 text-sm font-bold text-white shadow-lg">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -161,7 +176,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
             
             <h3 className="mb-3 text-2xl font-bold text-slate-900">Speed 20</h3>
             <p className="mb-6 text-slate-600 leading-relaxed">
-              A 20-question session adds challenge without feeling long. This is ideal for daily <strong>mental arithmetic practice</strong> routines.
+              Perfect for <strong>2-digit addition</strong> and times tables. A 20-question session adds challenge without feeling long, ideal for daily <strong>mental arithmetic practice</strong> routines.
             </p>
             
             <div className="space-y-3 text-sm text-slate-700 mb-6">
@@ -182,6 +197,11 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
           <div className="group relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg hover:shadow-2xl hover:border-purple-300 hover:-translate-y-2 transition-all duration-300">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-purple-500/10 to-transparent rounded-tl-3xl" />
             
+            {/* Grade Label Badge */}
+            <div className="relative mb-3 inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-green-100 to-emerald-100 px-3 py-1 text-xs font-bold text-green-700 shadow-sm border border-green-200">
+              Challenge for Class 5+
+            </div>
+            
             <div className="relative mb-4 inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-purple-100 to-purple-200 px-4 py-2 text-sm font-bold text-purple-700 shadow-sm">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clipRule="evenodd" />
@@ -191,7 +211,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
             
             <h3 className="mb-3 text-2xl font-bold text-slate-900">Fluency 50</h3>
             <p className="mb-6 text-slate-600 leading-relaxed">
-              A 50-question set builds stamina and helps you stay accurate under pressure.
+              Build total <strong>mental arithmetic</strong> mastery. A 50-question set builds stamina and helps you stay accurate under pressure.
             </p>
             
             <div className="space-y-3 text-sm text-slate-700 mb-6">
@@ -254,7 +274,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
                     Use known facts: 6×7 = (6×5) + (6×2)
                   </li>
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-purple-600">
-                    For ×9: 10×n − n
+                    For ×9: 10×n − n (essential <strong>mental math tricks</strong>)
                   </li>
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-purple-600">
                     Cluster practice: focus on 6s/7s for a week of <strong>mental math practice</strong>
