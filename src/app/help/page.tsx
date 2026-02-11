@@ -18,7 +18,7 @@ export default function HelpPage() {
 
       <div className="space-y-8">
         {/* Getting Started */}
-        <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+        <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Getting Started</h2>
           <div className="space-y-4 text-slate-700">
             <p>
@@ -41,7 +41,7 @@ export default function HelpPage() {
         </div>
 
         {/* Features */}
-        <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+        <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Key Features</h2>
           <div className="grid gap-6 md:grid-cols-2">
             <div>
@@ -72,7 +72,7 @@ export default function HelpPage() {
         </div>
 
         {/* Tips */}
-        <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+        <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Practice Tips</h2>
           <ul className="space-y-3 text-slate-700">
             <li className="flex items-start gap-3">
@@ -99,7 +99,7 @@ export default function HelpPage() {
         </div>
 
         {/* Troubleshooting */}
-        <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+        <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Troubleshooting</h2>
           <div className="space-y-4">
             <div>

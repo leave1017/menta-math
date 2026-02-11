@@ -27,7 +27,7 @@ export function PlanCard({
 }: PlanCardProps) {
   const cardClass = isRecommended
     ? "group relative rounded-3xl border-2 border-emerald-300 bg-gradient-to-br from-white to-emerald-50 p-8 shadow-xl hover:shadow-2xl hover:border-emerald-400 hover:-translate-y-2 transition-all duration-300 ring-2 ring-emerald-200"
-    : "group relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg hover:shadow-2xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300";
+    : "group relative rounded-3xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-600 hover:-translate-y-2 transition-all duration-300";
 
   return (
     <div className={cardClass}>

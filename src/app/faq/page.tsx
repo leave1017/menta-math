@@ -100,7 +100,7 @@ export default function FAQPage() {
         </p>
       </div>
 
-      <div className="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+      <div className="rounded-3xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
         <FAQAccordion items={faqItems} />
       </div>
 

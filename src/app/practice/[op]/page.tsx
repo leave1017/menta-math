@@ -216,7 +216,7 @@ export default async function OperationPage({ params }: Props) {
         </h2>
         <div className="space-y-4">
           {digits.map((d) => (
-            <div key={d} className="rounded-2xl border bg-white p-5 shadow-sm">
+            <div key={d} className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
               <div className="text-lg font-semibold text-slate-900 mb-3">{d}-Digit {label}</div>
               <div className="grid gap-2 sm:grid-cols-3">
                 {counts.map((c) => (
@@ -276,7 +276,7 @@ export default async function OperationPage({ params }: Props) {
         </h2>
         <div className="space-y-4">
           {content.faqs.map((faq, i) => (
-            <div key={i} className="rounded-xl border bg-white p-5 shadow-sm">
+            <div key={i} className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
               <h3 className="font-semibold text-slate-900">{faq.question}</h3>
               <p className="mt-2 text-slate-600">{faq.answer}</p>
             </div>

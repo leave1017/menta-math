@@ -33,6 +33,7 @@ const STATIC_ROUTES = [
   "/help",       // Help
   "/faq",        // FAQ
   "/tips",       // Tips
+  "/tips/mental-maths-for-class-2", // Blog: Mental Maths for Class 2
   "/grades",     // Grades
   "/feedback",   // Feedback
   "/contact",    // Contact

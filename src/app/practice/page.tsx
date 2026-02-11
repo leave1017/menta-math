@@ -41,10 +41,10 @@ export default function PracticePage() {
 
       {/* Hero Section */}
       <header className="max-w-4xl">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+        <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl">
           Mental Math Practice
         </h1>
-        <p className="mt-4 text-lg text-slate-600">
+        <p className="mt-4 text-lg text-slate-600 dark:text-slate-400">
           Free online mental math trainer to build speed and accuracy. Choose an operation, 
           select your difficulty level, and start practicing. Track your progress as you 
           improve your mental calculation skills.
@@ -53,7 +53,7 @@ export default function PracticePage() {
 
       {/* Introduction for SEO */}
       <section className="max-w-4xl">
-        <p className="text-slate-700 leading-relaxed">
+        <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
           Mental math practice is the key to mathematical fluency. When you can quickly and 
           accurately perform calculations in your head, you free up mental resources for 
           problem-solving and higher-level thinking. Our mental arithmetic practice tools 
@@ -67,7 +67,7 @@ export default function PracticePage() {
 
       {/* Operation Cards */}
       <section>
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+        <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mb-4">
           Choose Your Operation
         </h2>
         <div className="grid gap-4 sm:grid-cols-2">
@@ -75,10 +75,10 @@ export default function PracticePage() {
             <Link
               key={op}
               href={`/practice/${op}/`}
-              className="group rounded-2xl border bg-white p-6 shadow-sm transition-all hover:shadow-md hover:border-emerald-300"
+              className="group rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm transition-all hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-600"
             >
               <div className="flex items-center justify-between mb-2">
-                <div className="text-2xl font-bold tracking-tight text-slate-900 group-hover:text-emerald-600">
+                <div className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
                   {opLabel(op)}
                 </div>
                 <svg className="w-5 h-5 text-slate-400 group-hover:text-emerald-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -88,7 +88,7 @@ export default function PracticePage() {
               <div className="text-sm font-medium text-emerald-600 mb-2">
                 {opDescriptions[op]?.tagline}
               </div>
-              <div className="text-sm text-slate-600">
+              <div className="text-sm text-slate-600 dark:text-slate-400">
                 {opDescriptions[op]?.benefits}
               </div>
             </Link>
@@ -98,25 +98,25 @@ export default function PracticePage() {
 
       {/* Benefits Section */}
       <section className="max-w-4xl">
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+        <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mb-4">
           Benefits of Daily Mental Math Practice
         </h2>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-xl bg-gradient-to-br from-emerald-50 to-white p-5 border">
-            <div className="font-semibold text-slate-900 mb-2">Faster Calculations</div>
-            <p className="text-sm text-slate-600">
+          <div className="rounded-xl bg-gradient-to-br from-emerald-50 to-white dark:from-emerald-900/20 dark:to-slate-800 p-5 border border-slate-200 dark:border-slate-700">
+            <div className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Faster Calculations</div>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
               Regular practice builds automaticity, allowing you to solve problems quickly without conscious effort.
             </p>
           </div>
-          <div className="rounded-xl bg-gradient-to-br from-blue-50 to-white p-5 border">
-            <div className="font-semibold text-slate-900 mb-2">Better Number Sense</div>
-            <p className="text-sm text-slate-600">
+          <div className="rounded-xl bg-gradient-to-br from-blue-50 to-white dark:from-blue-900/20 dark:to-slate-800 p-5 border border-slate-200 dark:border-slate-700">
+            <div className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Better Number Sense</div>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
               Mental math develops intuition about numbers and relationships, improving overall mathematical understanding.
             </p>
           </div>
-          <div className="rounded-xl bg-gradient-to-br from-purple-50 to-white p-5 border">
-            <div className="font-semibold text-slate-900 mb-2">Improved Confidence</div>
-            <p className="text-sm text-slate-600">
+          <div className="rounded-xl bg-gradient-to-br from-purple-50 to-white dark:from-purple-900/20 dark:to-slate-800 p-5 border border-slate-200 dark:border-slate-700">
+            <div className="font-semibold text-slate-900 dark:text-slate-100 mb-2">Improved Confidence</div>
+            <p className="text-sm text-slate-600 dark:text-slate-400">
               Mastering mental math reduces math anxiety and builds confidence for more complex problems.
             </p>
           </div>
@@ -125,11 +125,11 @@ export default function PracticePage() {
 
       {/* Tips Section */}
       <section className="max-w-4xl">
-        <h2 className="text-2xl font-semibold text-slate-900 mb-4">
+        <h2 className="text-2xl font-semibold text-slate-900 dark:text-slate-100 mb-4">
           How to Practice Mental Math Effectively
         </h2>
-        <div className="rounded-xl border bg-white p-6 shadow-sm">
-          <ul className="space-y-4 text-slate-700">
+        <div className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
+          <ul className="space-y-4 text-slate-700 dark:text-slate-300">
             <li className="flex gap-3">
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 text-emerald-700 text-sm font-medium flex items-center justify-center">1</span>
               <div>
@@ -166,7 +166,7 @@ export default function PracticePage() {
 
       {/* Cross-links */}
       <section className="max-w-4xl pt-6 border-t">
-        <p className="text-slate-600">
+        <p className="text-slate-600 dark:text-slate-400">
           Not sure where to start?{" "}
           <Link href="/grades/" className="font-medium text-emerald-600 hover:text-emerald-700 underline underline-offset-2">
             Find practice by grade level

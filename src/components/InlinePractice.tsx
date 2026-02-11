@@ -90,7 +90,7 @@ export function InlinePractice({
           </div>
 
           {/* Trainer Component */}
-          <div className="rounded-2xl border-2 border-slate-200 bg-white p-6 shadow-lg">
+          <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-lg">
             <Trainer initialConfig={config} initialQuestions={questions} />
           </div>
 

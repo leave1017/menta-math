@@ -86,7 +86,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         <h2 className="mb-6 text-3xl font-bold tracking-tight">
           Mental Math Practice You Can Start in Seconds
         </h2>
-        <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
+        <div className="space-y-4 text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
           <p>
             <strong>Mental math practice</strong> is the foundation of mathematical fluency. Whether you&apos;re supporting <strong>mental maths for class 1</strong> beginners 
             learning number bonds, or <strong>mental maths for class 2</strong> students mastering <strong>2-digit addition</strong>, this free online trainer provides structured, 
@@ -103,7 +103,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         <h2 className="mb-6 text-3xl font-bold tracking-tight">
           Why Timed Mental Arithmetic Practice Works
         </h2>
-        <div className="space-y-4 text-lg text-slate-700 leading-relaxed">
+        <div className="space-y-4 text-lg text-slate-700 dark:text-slate-300 leading-relaxed">
           <p>
             Timed training is not about rushing—it&rsquo;s about building fluency. With steady <strong>mental arithmetic practice</strong>, 
             you reduce hesitation, strengthen fact recall, and catch common mistake patterns early. A good routine combines speed with accuracy: 
@@ -119,14 +119,14 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         <h2 className="mb-8 text-3xl font-bold tracking-tight text-center">
           Three Simple Practice Plans (Pick One and Repeat)
         </h2>
-        <p className="text-center text-slate-600 mb-8">
+        <p className="text-center text-slate-600 dark:text-slate-400 mb-8">
           <Link href="/practice-plans/" className="text-blue-600 hover:text-blue-700 underline font-medium">
             View all Practice Plans →
           </Link>
         </p>
         <div className="grid gap-8 md:grid-cols-3">
           {/* Card 1: Daily 10 */}
-          <div className="group relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg hover:shadow-2xl hover:border-blue-300 hover:-translate-y-2 transition-all duration-300">
+          <div className="group relative rounded-3xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg hover:shadow-2xl hover:border-blue-300 dark:hover:border-blue-600 hover:-translate-y-2 transition-all duration-300">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-blue-500/10 to-transparent rounded-tl-3xl" />
             
             {/* Grade Label Badge */}
@@ -139,15 +139,15 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
               Accuracy First
             </div>
             
-            <h3 className="mb-3 text-2xl font-bold text-slate-900">Daily 10</h3>
-            <p className="mb-6 text-slate-600 leading-relaxed">
+            <h3 className="mb-3 text-2xl font-bold text-slate-900 dark:text-slate-100">Daily 10</h3>
+            <p className="mb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
               A short set of 10 questions is perfect for building confidence. Master <strong>mental math for class 1</strong> basics with this gentle introduction to timed practice.
             </p>
             
-            <div className="space-y-3 text-sm text-slate-700 mb-6">
-              <p><strong className="text-slate-900">Goal:</strong> 90%+ accuracy</p>
-              <p><strong className="text-slate-900">Best for:</strong> 1-digit and early 2-digit <strong>mental math practice</strong></p>
-              <p><strong className="text-slate-900">Tip:</strong> repeat the same operation for one week</p>
+            <div className="space-y-3 text-sm text-slate-700 dark:text-slate-300 mb-6">
+              <p><strong className="text-slate-900 dark:text-slate-100">Goal:</strong> 90%+ accuracy</p>
+              <p><strong className="text-slate-900 dark:text-slate-100">Best for:</strong> 1-digit and early 2-digit <strong>mental math practice</strong></p>
+              <p><strong className="text-slate-900 dark:text-slate-100">Tip:</strong> repeat the same operation for one week</p>
             </div>
 
             <Link 
@@ -174,15 +174,15 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
               Recommended
             </div>
             
-            <h3 className="mb-3 text-2xl font-bold text-slate-900">Speed 20</h3>
-            <p className="mb-6 text-slate-600 leading-relaxed">
+            <h3 className="mb-3 text-2xl font-bold text-slate-900 dark:text-slate-100">Speed 20</h3>
+            <p className="mb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
               Perfect for <strong>2-digit addition</strong> and times tables. A 20-question session adds challenge without feeling long, ideal for daily <strong>mental arithmetic practice</strong> routines.
             </p>
             
-            <div className="space-y-3 text-sm text-slate-700 mb-6">
-              <p><strong className="text-slate-900">Goal:</strong> consistent rhythm, fewer pauses</p>
-              <p><strong className="text-slate-900">Best for:</strong> 2-digit addition/subtraction, times tables</p>
-              <p><strong className="text-slate-900">Tip:</strong> track your time and try to beat it by a small margin</p>
+            <div className="space-y-3 text-sm text-slate-700 dark:text-slate-300 mb-6">
+              <p><strong className="text-slate-900 dark:text-slate-100">Goal:</strong> consistent rhythm, fewer pauses</p>
+              <p><strong className="text-slate-900 dark:text-slate-100">Best for:</strong> 2-digit addition/subtraction, times tables</p>
+              <p><strong className="text-slate-900 dark:text-slate-100">Tip:</strong> track your time and try to beat it by a small margin</p>
             </div>
 
             <Link 
@@ -194,7 +194,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
           </div>
 
           {/* Card 3: Fluency 50 */}
-          <div className="group relative rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg hover:shadow-2xl hover:border-purple-300 hover:-translate-y-2 transition-all duration-300">
+          <div className="group relative rounded-3xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg hover:shadow-2xl hover:border-purple-300 dark:hover:border-purple-600 hover:-translate-y-2 transition-all duration-300">
             <div className="absolute top-0 left-0 w-24 h-24 bg-gradient-to-br from-purple-500/10 to-transparent rounded-tl-3xl" />
             
             {/* Grade Label Badge */}
@@ -209,15 +209,15 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
               Endurance Set
             </div>
             
-            <h3 className="mb-3 text-2xl font-bold text-slate-900">Fluency 50</h3>
-            <p className="mb-6 text-slate-600 leading-relaxed">
+            <h3 className="mb-3 text-2xl font-bold text-slate-900 dark:text-slate-100">Fluency 50</h3>
+            <p className="mb-6 text-slate-600 dark:text-slate-400 leading-relaxed">
               Build total <strong>mental arithmetic</strong> mastery. A 50-question set builds stamina and helps you stay accurate under pressure.
             </p>
             
-            <div className="space-y-3 text-sm text-slate-700 mb-6">
-              <p><strong className="text-slate-900">Goal:</strong> stable accuracy from start to finish</p>
-              <p><strong className="text-slate-900">Best for:</strong> mixed review or classroom drills</p>
-              <p><strong className="text-slate-900">Tip:</strong> if accuracy drops, step back to Speed 20 for a few days</p>
+            <div className="space-y-3 text-sm text-slate-700 dark:text-slate-300 mb-6">
+              <p><strong className="text-slate-900 dark:text-slate-100">Goal:</strong> stable accuracy from start to finish</p>
+              <p><strong className="text-slate-900 dark:text-slate-100">Best for:</strong> mixed review or classroom drills</p>
+              <p><strong className="text-slate-900 dark:text-slate-100">Tip:</strong> if accuracy drops, step back to Speed 20 for a few days</p>
             </div>
 
             <Link 
@@ -235,11 +235,11 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         <h2 className="mb-8 text-3xl font-bold tracking-tight text-center">
           Tips for Faster Mental Math Practice (By Operation)
         </h2>
-        <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg max-w-4xl mx-auto">
+        <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg max-w-4xl mx-auto">
           <div className="space-y-6">
               <div>
                 <h3 className="mb-3 font-bold text-blue-700 text-lg">Addition tips</h3>
-                <ul className="space-y-2 text-sm text-slate-700">
+                <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-blue-600">
                     Split into tens and ones: 38 + 27 = (38 + 20) + 7
                   </li>
@@ -254,7 +254,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
 
               <div>
                 <h3 className="mb-3 font-bold text-emerald-700 text-lg">Subtraction tips</h3>
-                <ul className="space-y-2 text-sm text-slate-700">
+                <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-emerald-600">
                     Use compensation: 52 − 19 = 52 − 20 + 1
                   </li>
@@ -269,7 +269,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
 
               <div>
                 <h3 className="mb-3 font-bold text-purple-700 text-lg">Multiplication tips</h3>
-                <ul className="space-y-2 text-sm text-slate-700">
+                <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-purple-600">
                     Use known facts: 6×7 = (6×5) + (6×2)
                   </li>
@@ -284,7 +284,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
 
               <div>
                 <h3 className="mb-3 font-bold text-orange-700 text-lg">Division tips</h3>
-                <ul className="space-y-2 text-sm text-slate-700">
+                <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-orange-600">
                     Think fact families: 7×8=56 → 56÷7=8
                   </li>
@@ -305,22 +305,22 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         <h2 className="mb-6 text-3xl font-bold tracking-tight">
           Common Mistakes to Avoid in Mental Arithmetic
         </h2>
-        <div className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
-          <ul className="space-y-4 text-slate-700">
+        <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
+          <ul className="space-y-4 text-slate-700 dark:text-slate-300">
             <li>
-              <strong className="text-slate-900">Addition:</strong> forgetting to carry; rushing the last digit
+              <strong className="text-slate-900 dark:text-slate-100">Addition:</strong> forgetting to carry; rushing the last digit
             </li>
             <li>
-              <strong className="text-slate-900">Subtraction:</strong> borrowing from the wrong place; switching digits
+              <strong className="text-slate-900 dark:text-slate-100">Subtraction:</strong> borrowing from the wrong place; switching digits
             </li>
             <li>
-              <strong className="text-slate-900">Multiplication:</strong> mixing similar facts (6×7 vs 7×8); skipping steps mentally
+              <strong className="text-slate-900 dark:text-slate-100">Multiplication:</strong> mixing similar facts (6×7 vs 7×8); skipping steps mentally
             </li>
             <li>
-              <strong className="text-slate-900">Division:</strong> ignoring remainders; not checking with multiplication
+              <strong className="text-slate-900 dark:text-slate-100">Division:</strong> ignoring remainders; not checking with multiplication
             </li>
           </ul>
-          <p className="mt-6 text-slate-600">
+          <p className="mt-6 text-slate-600 dark:text-slate-400">
             Strong <strong>mental arithmetic practice</strong> means noticing these patterns and correcting them early.
           </p>
         </div>
@@ -338,7 +338,7 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
 
       {/* Section 7: Back to Trainer (Lightweight) */}
       <section className="text-center py-6">
-        <p className="text-slate-600 mb-4 text-sm">Ready to practice?</p>
+        <p className="text-slate-600 dark:text-slate-400 mb-4 text-sm">Ready to practice?</p>
         <button
           onClick={() => {
             const trainer = document.getElementById("trainer");

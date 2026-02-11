@@ -179,7 +179,7 @@ export default async function PracticeDetailPage({ params, searchParams }: Props
 
       <Trainer initialConfig={initialConfig} initialQuestions={initialQuestions} showShare />
 
-      <section className="rounded-2xl border bg-white p-5 shadow-sm">
+      <section className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-sm">
         <h2 className="text-xl font-semibold">More {label} practice</h2>
         <div className="mt-3 grid gap-2 sm:grid-cols-3 lg:grid-cols-4">
           {siblings.slice(0, 8).map((s) => (

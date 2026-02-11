@@ -19,7 +19,7 @@ export function FAQAccordion({ items }: Props) {
       {items.map((item, idx) => {
         const isOpen = openIndex === idx;
         return (
-          <div key={idx} className="rounded-xl border bg-white shadow-sm">
+          <div key={idx} className="rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
             <button
               className="flex w-full items-center justify-between px-5 py-4 text-left"
               onClick={() => setOpenIndex(isOpen ? null : idx)}

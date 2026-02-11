@@ -73,7 +73,7 @@ export default async function GradePage({ params }: Props) {
             <Link
               key={i}
               href={`/p/${p.op}/${p.digits}/${p.count}/?from=grade${gradeNum}`}
-              className="group rounded-xl border bg-white p-4 shadow-sm transition-all hover:shadow-md hover:border-emerald-300"
+              className="group rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4 shadow-sm transition-all hover:shadow-md hover:border-emerald-300 dark:hover:border-emerald-600"
             >
               <div className="flex items-center justify-between">
                 <div className="font-semibold text-slate-900 group-hover:text-emerald-600">
@@ -121,7 +121,7 @@ export default async function GradePage({ params }: Props) {
             </h2>
             <div className="space-y-3">
               {/* US Standards */}
-              <div className="rounded-lg border bg-white p-3">
+              <div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3">
                 <h3 className="font-medium text-slate-900 text-sm mb-2 flex items-center gap-1">
                   <span>🇺🇸</span> US Common Core
                 </h3>
@@ -136,7 +136,7 @@ export default async function GradePage({ params }: Props) {
               </div>
 
               {/* UK Standards */}
-              <div className="rounded-lg border bg-white p-3">
+              <div className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-3">
                 <h3 className="font-medium text-slate-900 text-sm mb-2 flex items-center gap-1">
                   <span>🇬🇧</span> UK Year {data.ukYear}
                 </h3>
@@ -180,7 +180,7 @@ export default async function GradePage({ params }: Props) {
         </h2>
         <div className="space-y-3">
           {data.faqs.map((faq, i) => (
-            <div key={i} className="rounded-lg border bg-white p-4">
+            <div key={i} className="rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
               <h3 className="font-medium text-slate-900 text-sm">{faq.question}</h3>
               <p className="mt-2 text-sm text-slate-600">{faq.answer}</p>
             </div>

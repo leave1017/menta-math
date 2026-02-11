@@ -17,7 +17,7 @@ export default function ContactPage() {
         </p>
       </div>
 
-      <div className="rounded-3xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+      <div className="rounded-3xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
         <div className="space-y-6">
           <div>
             <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>

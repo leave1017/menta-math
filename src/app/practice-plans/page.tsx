@@ -38,7 +38,7 @@ export default function PracticePlansPage() {
       </div>
 
       {/* How to Choose */}
-      <section className="max-w-3xl mx-auto rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+      <section className="max-w-3xl mx-auto rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
         <h2 className="text-2xl font-bold mb-4">How to Choose Your Plan</h2>
         <div className="space-y-4 text-slate-700">
           <p>

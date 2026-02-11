@@ -26,7 +26,7 @@ export default function CookiesPage() {
 
         <h2>How We Use Cookies</h2>
         <p>
-          Menta Math uses minimal cookies and browser storage for:
+          Mental Math uses minimal cookies and browser storage for:
         </p>
         <ul>
           <li><strong>Functionality:</strong> Remembering your practice preferences (operation type, difficulty level, question count)</li>

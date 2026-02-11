@@ -15,7 +15,7 @@ export default function PrintPage() {
         </p>
       </div>
 
-      <div className="rounded-2xl border bg-white p-6 shadow-sm">
+      <div className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-6 shadow-sm">
         <h2 className="text-xl font-semibold">Features (coming soon)</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-slate-700">
           <li>Customizable worksheet generation (25/50/100 questions per sheet)</li>

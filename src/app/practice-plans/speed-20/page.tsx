@@ -40,7 +40,7 @@ export default function Speed20Page() {
       </div>
 
       {/* How to Use */}
-      <section className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+      <section className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
         <h2 className="text-2xl font-bold mb-6">How to Use This Plan</h2>
         <ol className="space-y-4 text-slate-700">
           <li className="flex gap-3">
@@ -98,7 +98,7 @@ export default function Speed20Page() {
       />
 
       {/* FAQ */}
-      <section className="rounded-2xl border-2 border-slate-200 bg-white p-8 shadow-lg">
+      <section className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg">
         <h2 className="text-2xl font-bold mb-6">Common Questions</h2>
         <div className="space-y-6">
           <div>
