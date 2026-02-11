@@ -35,7 +35,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900">Email</h3>
-                <p className="text-slate-600">support@mentamath.com</p>
+                <p className="text-slate-600">support@mentalmath.cc</p>
               </div>
             </div>
 

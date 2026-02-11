@@ -11,7 +11,7 @@ export default function PrintPage() {
       <div className="max-w-3xl space-y-2">
         <h1 className="text-3xl font-semibold tracking-tight">Print Worksheets</h1>
         <p className="text-slate-600">
-          Generate printable &ldquo;Math Minute&rdquo; style worksheets for offline practice. Coming soon!
+          Generate printable &ldquo;Math Minute&rdquo; style worksheets for offline practice. Coming soon! Join our waitlist to get 50+ free PDF samples upon launch.
         </p>
       </div>
 
