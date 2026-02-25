@@ -6,7 +6,15 @@ export const metadata = {
 };
 
 // 文章列表数据
-const articles = [
+const allArticles = [
+  {
+    slug: "mental-math-tricks-for-kids",
+    title: "5 Simple Mental Math Tricks for Kids: Boost Math Fluency at Home",
+    description: "Discover effective mental math tricks for kids to improve math fluency. Practical 'heart calculation practice' exercises for parents and teachers.",
+    date: "2026-02-25",
+    readTime: "6 min",
+    tags: ["Tricks", "Fluency", "Parents"],
+  },
   {
     slug: "mental-maths-for-class-2",
     title: "Mastering Mental Maths for Class 2: Strategies, Tips, and Daily Practice",
@@ -14,6 +22,14 @@ const articles = [
     date: "2026-02-11",
     readTime: "8 min",
     tags: ["Class 2", "Addition", "Beginners"],
+  },
+  {
+    slug: "mental-maths-for-class-3",
+    title: "Mastering Mental Maths for Class 3: Times Tables and Fast Calculation",
+    description: "Essential mental math strategies for class 3 students. Master times tables, simple division, and 3-digit addition with our daily practice guide.",
+    date: "2026-02-17",
+    readTime: "8 min",
+    tags: ["Class 3", "Times Tables", "Addition"],
   },
 ];
 
@@ -31,7 +47,7 @@ export default function TipsPage() {
       {/* Articles List */}
       <section>
         <div className="grid gap-6">
-          {articles.map((article) => (
+          {allArticles.map((article) => (
             <Link
               key={article.slug}
               href={`/tips/${article.slug}/`}
