@@ -26,6 +26,20 @@ export function Trainer({ initialConfig, initialQuestions, showShare = false }: 
   const [idx, setIdx] = useState(0);
   const [value, setValue] = useState("");
   const [feedback, setFeedback] = useState<Feedback>({ kind: "idle" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const submitTimeoutRef = useRef<number | null>(null);
+  const autoSubmitTimeoutRef = useRef<number | null>(null);
+
+  const clearTimers = useCallback(() => {
+    if (submitTimeoutRef.current !== null) {
+      window.clearTimeout(submitTimeoutRef.current);
+      submitTimeoutRef.current = null;
+    }
+    if (autoSubmitTimeoutRef.current !== null) {
+      window.clearTimeout(autoSubmitTimeoutRef.current);
+      autoSubmitTimeoutRef.current = null;
+    }
+  }, []);
 
   // Use performance.now() for high precision timing
   const [startTs, setStartTs] = useState<number | null>(null);
@@ -40,17 +54,19 @@ export function Trainer({ initialConfig, initialQuestions, showShare = false }: 
   const timeLimitMs = timeLimitMinutes > 0 ? timeLimitMinutes * 60 * 1000 : 0;
 
   const restart = useCallback((next: PracticeConfig) => {
+    clearTimers();
     setQuestions(makeQuestions(next));
     setIdx(0);
     setValue("");
     setFeedback({ kind: "idle" });
+    setIsSubmitting(false);
     setStartTs(null);
     setEndTs(null);
     setNow(performance.now());
     setCorrect(0);
     setWrong(0);
     queueMicrotask(() => inputRef.current?.focus());
-  }, []);
+  }, [clearTimers]);
 
   // Calculate elapsed or remaining time
   const { elapsedMs, remainingMs, timeUp } = useMemo(() => {
@@ -79,33 +95,48 @@ export function Trainer({ initialConfig, initialQuestions, showShare = false }: 
   }, [timeUp, endTs, done]);
 
   const onSubmit = useCallback(() => {
-    if (!current || done || timeUp) return;
+    if (!current || done || timeUp || isSubmitting) return;
 
-    const parsed = Number(value.trim());
-    const isCorrect = Number.isFinite(parsed) && parsed === current.answer;
+    const trimmed = value.trim();
+    if (!trimmed) return;
+
+    clearTimers();
+    setIsSubmitting(true);
+
+    const parsed = Number(trimmed);
+    if (!Number.isFinite(parsed)) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    const isCorrect = parsed === current.answer;
     const isLast = idx + 1 >= questions.length;
 
     if (isCorrect) {
       setCorrect((n) => n + 1);
       setFeedback({ kind: "correct" });
       setValue("");
-      window.setTimeout(() => {
+      submitTimeoutRef.current = window.setTimeout(() => {
         setFeedback({ kind: "idle" });
         if (isLast) setEndTs(performance.now());
         setIdx((i) => i + 1);
+        setIsSubmitting(false);
+        submitTimeoutRef.current = null;
       }, 250);
       return;
     }
 
     setWrong((n) => n + 1);
     setFeedback({ kind: "wrong", correctAnswer: current.answer });
-    window.setTimeout(() => {
+    submitTimeoutRef.current = window.setTimeout(() => {
       setFeedback({ kind: "idle" });
       setValue("");
       if (isLast) setEndTs(performance.now());
       setIdx((i) => i + 1);
+      setIsSubmitting(false);
+      submitTimeoutRef.current = null;
     }, 650);
-  }, [current, done, timeUp, value, idx, questions.length]);
+  }, [current, done, timeUp, isSubmitting, value, idx, questions.length, clearTimers]);
 
   // Update timer display
   useEffect(() => {
@@ -117,6 +148,10 @@ export function Trainer({ initialConfig, initialQuestions, showShare = false }: 
   useEffect(() => {
     inputRef.current?.focus();
   }, [idx, done]);
+
+  useEffect(() => {
+    return () => clearTimers();
+  }, [clearTimers]);
 
   // Start timer on first valid digit input
   const handleInputChange = (newValue: string) => {
@@ -141,8 +176,13 @@ export function Trainer({ initialConfig, initialQuestions, showShare = false }: 
 
     if (inputDigits >= expectedDigits) {
       // Small delay to let user see their input
-      const timer = window.setTimeout(() => onSubmit(), 200);
-      return () => window.clearTimeout(timer);
+      autoSubmitTimeoutRef.current = window.setTimeout(() => onSubmit(), 200);
+      return () => {
+        if (autoSubmitTimeoutRef.current !== null) {
+          window.clearTimeout(autoSubmitTimeoutRef.current);
+          autoSubmitTimeoutRef.current = null;
+        }
+      };
     }
   }, [value, current, done, timeUp, feedback.kind, onSubmit]);
 

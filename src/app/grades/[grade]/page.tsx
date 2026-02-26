@@ -105,12 +105,24 @@ export default async function GradePage({ params }: Props) {
               Skills to Master
             </h2>
             <div className="space-y-2">
-              {data.skills.map((skill, i) => (
-                <div key={i} className="rounded-lg border bg-slate-50 p-3">
-                  <div className="font-medium text-slate-900 text-sm">{skill.title}</div>
-                  <div className="text-xs text-slate-600">{skill.description}</div>
-                </div>
-              ))}
+              {data.skills.map((skill, i) => {
+                const isNumberBonds = skill.title.toLowerCase().includes("number bonds");
+                return (
+                  <div key={i} className="rounded-lg border bg-slate-50 p-3">
+                    {isNumberBonds ? (
+                      <Link
+                        href={`/p/add/1/10/?from=grade${gradeNum}`}
+                        className="font-medium text-slate-900 text-sm hover:text-emerald-600"
+                      >
+                        {skill.title}
+                      </Link>
+                    ) : (
+                      <div className="font-medium text-slate-900 text-sm">{skill.title}</div>
+                    )}
+                    <div className="text-xs text-slate-600">{skill.description}</div>
+                  </div>
+                );
+              })}
             </div>
           </div>
 

@@ -238,7 +238,11 @@ export function HomeContent({ defaultOp = "add", defaultDigits = 1 }: HomeConten
         <div className="rounded-2xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 shadow-lg max-w-4xl mx-auto">
           <div className="space-y-6">
               <div>
-                <h3 className="mb-3 font-bold text-blue-700 text-lg">Addition tips</h3>
+                <h3 className="mb-3 font-bold text-blue-700 text-lg">
+                  <Link href="/practice/add/" className="hover:text-blue-800">
+                    Addition tips
+                  </Link>
+                </h3>
                 <ul className="space-y-2 text-sm text-slate-700 dark:text-slate-300">
                   <li className="pl-4 before:content-['•'] before:mr-2 before:text-blue-600">
                     Split into tens and ones: 38 + 27 = (38 + 20) + 7
