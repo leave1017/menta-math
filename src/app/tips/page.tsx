@@ -8,6 +8,22 @@ export const metadata = {
 // 文章列表数据
 const allArticles = [
   {
+    slug: "mental-maths-for-class-1",
+    title: "Mental Maths for Class 1: Fun Foundations with Number Bonds",
+    description: "Playful mental maths for class 1. Build number bonds to 10, counting on skills, and number line visualization with simple daily practice.",
+    date: "2026-03-02",
+    readTime: "7 min",
+    tags: ["Class 1", "Number Bonds", "Parents"],
+  },
+  {
+    slug: "mental-maths-for-class-4",
+    title: "Mental Maths for Class 4: Speed Techniques for Multiplication and Division",
+    description: "Mental maths for class 4 with 2-digit multiplication, long division basics, and large-number estimation. Built for speed and logic.",
+    date: "2026-03-02",
+    readTime: "9 min",
+    tags: ["Class 4", "Multiplication", "Division"],
+  },
+  {
     slug: "mental-math-tricks-for-kids",
     title: "5 Simple Mental Math Tricks for Kids: Boost Math Fluency at Home",
     description: "Discover effective mental math tricks for kids to improve math fluency. Practical 'heart calculation practice' exercises for parents and teachers.",
